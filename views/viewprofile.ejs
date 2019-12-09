@@ -1,0 +1,46 @@
+<div class="dashboard-container">
+    
+        <%- include ('./partials/navhome.ejs') %>
+        <% Profile.forEach(function(profile){ %>
+        <div class="row m-3 photo">
+        <div class="profilephoto-container text-center col-md-3"> 
+        <img src="<%=profile.destination %><%= profile.profile_photo %>"">
+        </div>
+        <div class="col-md-8 mt-3">   
+        <h5 class="welcome"><%=  profile.firstname %> <%=  profile.lastname %> </h5>
+        <p>Bio: <%= profile.bio %></p>
+        <p>Gender: <%= profile.gender %></p>
+        <p>Member Since: <%=profile.date %></p>
+        </div>
+    
+        </div>
+        <% });%>
+       
+                        
+         
+        <div class="grid-profile">    
+        </div>
+        <div class="grid-posts">
+        <% Blog.forEach(function(blog){ %>
+        <div class="blog-container">
+        <div class="blog-title">
+        <h5><%= blog.title %></h5>
+        </div>
+        <div class="blog-content">
+        <%= blog.content %>
+        </div>
+        <div class="blog-date">
+        <div class="btns" >
+        Last modified: <%= blog.date %>
+        </div>
+    
+        </div>
+        <% });%>
+    
+    
+              
+                
+                
+    
+            </div>
+    <div>

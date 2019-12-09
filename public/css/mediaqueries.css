@@ -1,0 +1,7 @@
+ @media  (max-width: 600px){
+   
+.write-form{
+    max-width: 25rem;
+    margin: 1rem auto;
+}
+} 

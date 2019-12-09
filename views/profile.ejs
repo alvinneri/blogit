@@ -1,0 +1,41 @@
+<div class="dashboard-container">
+    <%- include ('./partials/navhome.ejs') %>
+     
+
+    <% Profile.forEach(function(profile){ %>   
+    <div class="row m-5">
+            <%- include ('./partials/messages.ejs') %>
+    <div class="col-md-4 photo">
+            <div class="profilephoto-container text-center"> 
+            <img src="<%=profile.destination %><%= profile.profile_photo %>"">
+            </div>
+            <div class="form-photo">
+            <form action="/users/uploadprofile" method="POST" enctype="multipart/form-data">
+                <input type="file" name="profilephotoName" id="profilephotoName">
+                <button class="btn btn-dark" type="submit">UPLOAD</button>
+            </form>
+            </div>
+    </div>
+    <div class="col-md-7">
+        <form action='/users/editbio' method="POST">
+        <div class="form-group">
+        <label for="bio">Bio</label>
+        <textarea class="form-control" id="content" name="bio" rows="5"><%= profile.bio %></textarea>
+        </div>
+        <div class="form-group">
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender" class="form-control">
+        <option selected >Male</option>
+        <option>Female</option>
+        </select>
+         </div>  
+        <button class="btn btn-dark" type="submit">SAVE</button>
+        </form>
+
+        <% }); %>
+    </div>
+   
+
+<div>
+    
+

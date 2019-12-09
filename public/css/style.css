@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,900&display=swap');
+
+/* Main Navigation */
+.main-nav{
+    z-index: 999!important;
+}
+
+/* Login Form */
+.container-login{
+    max-width: 20rem;
+    margin: 0 auto;
+    
+}
+
+/* Register Form */
+
+.container-register{
+    max-width: 25rem;
+    margin: 0 auto;
+    
+    
+}
+
+/* About Page */
+
+.container-about{
+    max-width: 25rem;
+    margin: 0 auto;
+    font-size: .8rem;
+    
+}
+
+.about-container{
+   
+    margin: 0rem auto;
+    text-align: center;
+    z-index: 9999;
+    padding-top: 5rem;
+    background: white;
+
+}
+
+/* Homepage */
+.container-homepage{
+    max-width: 25rem;
+    margin: 0 auto;
+    text-align: center;
+    
+
+}
+.container-homepage h1{
+    font-size: 5rem;
+}
+
+.container-homepage a{
+    width: 70%;
+    margin: .5rem auto;
+}
+
+.homepage-container{
+    background-image: url('../images/coverpage.jpg');
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    
+}
+
+.dark-bg{
+    background-color:rgba(0,0,0,0.4);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    
+}
+
+.header-content{
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translate(-50%, -30%);
+    transform: translate(-50%, -30%);
+    text-align: center;
+    
+}
+
+.header-content h1{
+    font-size: 6rem;
+    color: #808080
+}
+
+
+.card{
+    background: #f5f5f5;
+}
+
+
+
+/* Profile */
+.grid-profile{
+
+    background: #F5F5F5;
+    /* height: 100vh; */
+    text-align: right;
+    padding-right: 1rem;
+   
+}
+
+.grid-posts{
+    grid-area: posts;
+    padding: 1rem;
+}
+
+
+.btns{
+    padding-top: 1rem;
+}
+
+.write-form{
+    max-width: 50rem;
+    margin: 1rem auto;
+}
+
+.grid-posts{
+    background: #f5f5f5;
+    /* margin-left: 1rem; */
+}
+
+.class{
+    text-align: center;
+    margin: 1rem;
+}
+
+.blog-container{
+    width: 100%;
+    background: azure;
+    margin: 1rem auto; 
+}
+
+.blog-title{
+    padding: 1rem;
+}
+
+.blog-content{
+    padding: 1rem;
+    text-align: justify;
+}
+
+.blog-date{
+    text-align: right;
+    font-style: italic;
+    padding: 1rem;
+    font-size: .7rem;
+}
+
+.profilephoto-container img{
+    width: 70%;
+    border-radius: 50%;
+    
+
+
+}
+
+
+.socials-header{
+    padding-top: 1rem;
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+.socials div{
+    padding: 1rem;
+}
+
+.form-photo{
+    padding-top: 1rem;
+}
+
+.form-photo input{
+    width: 60% ;
+}
+
+.photo{
+    background: #f5f5f5;
+    padding: 1rem;
+}
+
+.author:link{
+    text-decoration: none;
+    color: black
+
+
+}
+
+.author:hover{
+    text-decoration: none;
+    color: black;
+    cursor:pointer;  
+
+
+}
+
+#profilephoto{
+    width: 100%;
+}
+

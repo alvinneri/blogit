@@ -1,0 +1,29 @@
+<div class="dashboard-container">
+<%- include ('./partials/navhome.ejs') %>
+
+<div class="grid-posts">
+        <% Blog.forEach(function(blog){ %>
+            <div class="blog-container">
+                <div class="blog-title">
+                        <h5><%= blog.title %></h5>
+                       
+                </div>
+                <div class="blog-content">      
+                        <p class="collapse" id="<%= blog.id.substring(1,6) %>"> <%= blog.content %></p>
+                        <p><a href="" data-toggle="collapse" data-target="#<%= blog.id.substring(1,6) %>" class="btn btn-dark">Read It</a></p>
+                </div>
+                <div class="blog-date">
+                <a class="author" href="/feed/profile/<%=blog.email%>">Written By: <i><%= blog.firstname %> <%= blog.lastname %></i></a>
+                <p class="email"> <i class="fas fa-envelope fa-1x"></i>: <i><%= blog.email %></i> </p>
+                    Uploaded: <%= blog.date %>
+                </div>
+          
+            </div>
+       <% });%>
+            
+
+</div>
+
+
+
+</div>

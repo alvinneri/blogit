@@ -1,0 +1,21 @@
+<div class="dashboard-container">
+    <%- include ('./partials/navhome.ejs') %>
+
+    <div class="write-form">
+    <% Blog.forEach(function(blog){ %>
+    <%- include ('./partials/messages.ejs') %>
+    <form action="/dashboardoptions/update/<%=blog.id%>" method="POST">
+         
+            <div class="form-group ">
+            <label for="title">TITLE</label>
+            <input type="text" class="form-control" id="title" name="title" value="<%= blog.title %>" >
+            </div>
+            <div class="form-group">
+            <label for="content">Write content</label>
+            <textarea class="form-control" id="content" name="content" rows="20" ><%= blog.content %></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark">Update</button>
+            <% }) %>
+    </form>
+    </div>
+</div>      

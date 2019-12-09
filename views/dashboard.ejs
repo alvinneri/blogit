@@ -1,0 +1,52 @@
+<div class="dashboard-container">
+    
+    <%- include ('./partials/navhome.ejs') %>
+    <% Profile.forEach(function(profile){ %>
+    <div class="row m-3 photo">
+    <div class="profilephoto-container text-center col-md-3"> 
+    <img id="profilephoto" src="<%=profile.destination %><%= profile.profile_photo %>"">
+    </div>
+    <div class="col-md-8 mt-3">   
+    <h5 class="welcome">Welcome <%=  firstname %> <%=  lastname %> </h5>
+    <p>Bio:<i> <%= profile.bio %></p></i>
+    <p>Gender:<i> <%= profile.gender %></p> </i>
+    <p>Member Since:<i> <%=profile.date %></p> </i>
+    <a href="/users/profile" class="btn btn-dark"><i>Edit Profile</i></a>
+    </div>
+
+    </div>
+    <% });%>
+   
+                    
+     
+    <div class="grid-profile">    
+    <div class="btns"><a class="btn btn-light" href="/dashboardoptions/write"><i class="fas fa-plus fa-1x"></i></a></div>       
+    </div>
+    <div class="grid-posts">
+    <% Blog.forEach(function(blog){ %>
+    <div class="blog-container">
+    <div class="blog-title">
+    <h5><%= blog.title %></h5>
+    </div>
+    <div class="blog-content">
+    <%= blog.content %>
+    </div>
+    <div class="blog-date">
+    <div class="btns" >
+    <form action="/dashboardoptions/delete/<%=blog.id%>" method="POST">
+    <a class="btn btn-light" href="/dashboardoptions/edit/<%=blog.id%>"><i class="fas fa-edit fa-1x"></i></a>
+    <button class="btn btn-dark" type="submit" ><i class="fas fa-trash-alt fa-1x"></i></button></div>
+    </form>
+    Last modified: <%= blog.date %>
+    </div>
+
+    </div>
+    <% });%>
+
+
+          
+            
+            
+
+        </div>
+<div>
